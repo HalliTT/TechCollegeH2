@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>javaScript Binding Dynamic</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../js/JavaScriptBindingDynamic.js"></script>
+    <script src="../jqery/jq.js"></script>
+    
+</head>
+
+<body>
+    <div class="Margin">
+        <input id="txtButtonContext" disabled type="text" value="test" onblur="TextboxValueChanged()" />
+        <br />
+        <br />
+        <input id="btnAddNewButtonJs" type="button" value="Tilføj JS knap" onclick="AddNewButtonJs()" />
+        <input id="btnAddNewButtonJq" type="button" value="Tilføj JQ knap" />
+        <br />
+        <br />
+        
+        <div class="ButtonsAdded">
+        </div>
+        <div class="ButtonsEdit">
+        </div>
+        <div class="ButtonsDelete">
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    window.onload = SetupDOMElements();
+</script>
