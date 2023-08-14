@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="My_FirstAvaloniaProject.Forms">
+	<StackPanel HorizontalAlignment="Left">
+		<TextBlock Name="FirstNameText" Margin="4">First Name</TextBlock>
+		<TextBox Name="FirstName" HorizontalAlignment="Left" Margin="4 4 0 0" Watermark="First Name" Width="250"></TextBox>
+		
+		<TextBlock Name="LastNameText" Margin="4 10 0 0 ">Last Name</TextBlock>
+		<TextBox Name="LastName" HorizontalAlignment="Left" Margin="4 4 0 0" Watermark="Last Name" Width="250"></TextBox>
+		
+		<TextBlock Name="GenderText" Margin="4 10 0 0 ">Gender</TextBlock>
+		<RadioButton Name="Male" Margin="4 4 0 0" GroupName="Gender">Male</RadioButton>
+		<RadioButton Name="Female" Margin="4 4 0 0" GroupName="Gender">Female</RadioButton>
+		<RadioButton Name="Something" Margin="4 4 0 0" GroupName="Gender">Something else</RadioButton>
+
+		<TextBlock Name="EducationText" Margin="4 10 0 0">Education</TextBlock>
+		<CheckBox Name="Elementary" Margin="4 4 0 0">Elementary</CheckBox>
+		<CheckBox Name="Highschool" Margin="4 4 0 0">Highschool</CheckBox>
+		<CheckBox Name="College" Margin="4 4 0 0">College</CheckBox>
+
+		<Button HorizontalAlignment="Center" Margin="200 4 0 0" Click="OnClear">Clear</Button>
+		<Button HorizontalAlignment="Center" Margin="350 -30 0 0" Click="OnSubmit">Submit</Button>
+
+		<TextBlock Name="ErrorBoox"></TextBlock>
+
+		<Button Name="Login" Margin="4 4 0 0" Click="OnLogin">Login</Button>
+	</StackPanel>
+</UserControl>

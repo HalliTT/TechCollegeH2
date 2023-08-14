@@ -1,0 +1,58 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="My_FirstAvaloniaProject.NotePad"
+			 >
+	<DockPanel>
+		<Menu Height="20" DockPanel.Dock="Top">
+			<MenuItem Header="File">
+				<MenuItem Header="New"></MenuItem>
+				<MenuItem Header="New Window"></MenuItem>
+				<MenuItem Header="Open..."></MenuItem>
+				<MenuItem Header="Save"></MenuItem>
+				<MenuItem Header="Save As..."></MenuItem>
+				<Separator />
+				<MenuItem Header="Page Setup..."></MenuItem>
+				<MenuItem Header="Print..."></MenuItem>
+				<Separator />
+				<MenuItem Header="Exit"></MenuItem>
+			</MenuItem>
+			<MenuItem Header="Edit">
+				<MenuItem Header="Undo"></MenuItem>
+				<Separator />
+				<MenuItem Header="Cut"></MenuItem>
+				<MenuItem Header="Copy"></MenuItem>
+				<MenuItem Header="Paste"></MenuItem>
+				<MenuItem Header="Delete"></MenuItem>
+				<Separator />
+				<MenuItem Header="Search with Bing..."></MenuItem>
+				<MenuItem Header="Find..."></MenuItem>
+				<MenuItem Header="Find Next"></MenuItem>
+				<MenuItem Header="Find Previous"></MenuItem>
+				<MenuItem Header="Replace..."></MenuItem>
+				<MenuItem Header="Go To..."></MenuItem>
+				<Separator />
+				<MenuItem Header="Select All"></MenuItem>
+				<MenuItem Header="Time/Date"></MenuItem>
+			</MenuItem>
+			<MenuItem Header="Format"></MenuItem>
+			<MenuItem Header="View"></MenuItem>
+			<MenuItem Header="Help"></MenuItem>
+		</Menu>
+		<StackPanel Height="20" DockPanel.Dock="Bottom" Background="#f0f0f0">
+			<StackPanel Height="20" Orientation="Horizontal" HorizontalAlignment="Right">
+				<Border BorderBrush="#d7d7d7" BorderThickness="1 0 0 0" />
+				<TextBlock VerticalAlignment="Center" FontSize="11" Margin="0 0 50 0" Padding="10 0 0 0">Ln 1, Col 1</TextBlock>
+				<Border BorderBrush="#d7d7d7" BorderThickness="1 0 0 0" />
+				<TextBlock VerticalAlignment="Center" FontSize="11" Margin="0 0 50 0" Padding="10 0 0 0">100%</TextBlock>
+				<Border BorderBrush="#d7d7d7" BorderThickness="1 0 0 0" />
+				<TextBlock VerticalAlignment="Center" FontSize="11" Margin="0 0 50 0" Padding="10 0 0 0">Windows (CRLF)</TextBlock>
+				<Border BorderBrush="#d7d7d7" BorderThickness="1 0 0 0" />
+				<TextBlock VerticalAlignment="Center" FontSize="11" Margin="0 0 69 0" Padding="10 0 0 0">UTF-8</TextBlock>
+			</StackPanel>
+		</StackPanel>
+		<TextBox BorderThickness="0 1 0 0 " CornerRadius="0" FontSize="15" AcceptsReturn="True"></TextBox>
+	</DockPanel>
+</UserControl>

@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:uc="clr-namespace:My_FirstAvaloniaProject"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="My_FirstAvaloniaProject.MainWindow"
+		Title="Untitled - Notepad"
+	>
+	<Panel>
+		<uc:ContentArea Name="ContentArea"></uc:ContentArea>
+		<!--<uc:Forms></uc:Forms>-->
+		<!--<uc:CalendarControl HorizontalAlignment="Center"></uc:CalendarControl>-->
+		<!--<uc:MyUserControl></uc:MyUserControl>-->
+		<!--<uc:ValutaControl Margin="10 200 0 0"></uc:ValutaControl>-->
+		<!--<uc:CustomButton CustomEvent="Tttt"></uc:CustomButton>-->
+		<!--<uc:NotePad></uc:NotePad>-->
+	</Panel>
+</Window>

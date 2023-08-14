@@ -1,0 +1,46 @@
+is_global = true
+build_property.AvaloniaNameGeneratorIsEnabled = true
+build_property.AvaloniaNameGeneratorBehavior = InitializeComponent
+build_property.AvaloniaNameGeneratorDefaultFieldModifier = internal
+build_property.AvaloniaNameGeneratorFilterByPath = *
+build_property.AvaloniaNameGeneratorFilterByNamespace = *
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = My_FirstAvaloniaProject
+build_property.ProjectDir = C:\Users\haral\Desktop\Tech college\H2\GUI\Avalonia\First project\My FirstAvaloniaProject\My FirstAvaloniaProject\
+
+[C:/Users/haral/Desktop/Tech college/H2/GUI/Avalonia/First project/My FirstAvaloniaProject/My FirstAvaloniaProject/App.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/haral/Desktop/Tech college/H2/GUI/Avalonia/First project/My FirstAvaloniaProject/My FirstAvaloniaProject/CalendarControl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/haral/Desktop/Tech college/H2/GUI/Avalonia/First project/My FirstAvaloniaProject/My FirstAvaloniaProject/ContentArea.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/haral/Desktop/Tech college/H2/GUI/Avalonia/First project/My FirstAvaloniaProject/My FirstAvaloniaProject/CustomButton.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/haral/Desktop/Tech college/H2/GUI/Avalonia/First project/My FirstAvaloniaProject/My FirstAvaloniaProject/FormLogin.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/haral/Desktop/Tech college/H2/GUI/Avalonia/First project/My FirstAvaloniaProject/My FirstAvaloniaProject/Forms.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/haral/Desktop/Tech college/H2/GUI/Avalonia/First project/My FirstAvaloniaProject/My FirstAvaloniaProject/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/haral/Desktop/Tech college/H2/GUI/Avalonia/First project/My FirstAvaloniaProject/My FirstAvaloniaProject/MyUserControl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/haral/Desktop/Tech college/H2/GUI/Avalonia/First project/My FirstAvaloniaProject/My FirstAvaloniaProject/NotePad.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/haral/Desktop/Tech college/H2/GUI/Avalonia/First project/My FirstAvaloniaProject/My FirstAvaloniaProject/ValutaControl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
