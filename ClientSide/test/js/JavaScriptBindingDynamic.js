@@ -3,7 +3,7 @@ var TextBoxElement;
 var DocumentButton;
 
 function SetupDOMElements() {
-  TextBoxElement = document.getElementById("txtButtonContext");
+  TextBoxElement = document.getElementById("txtButtonContextJs");
   TextBoxElement.disabled = true;
 }
 
@@ -14,16 +14,14 @@ function AddNewButtonJs() {
 
   var name = ["Button", "Delete", "Edit"];
   for (var i = 0; i < name.length; i++) {
-    btnAdded(`Name:${name[i]}. Id:${i}. Row:${ButtonCounter}.`);
+    btnAdded(`Name:Js - ${name[i]}. Id:${i}. Row:${ButtonCounter}.`);
   }
   ButtonCounter++;
 }
 
-//Create button
 function btnAdded(Name) {
   //Find Name:
-  var partsName = Name.split(".");
-  var extractedName = partsName[0].split(":")[1];
+  var extractedName = Name.split(".")[0].split(":")[1];
 
   var button = document.createElement("input");
   button.setAttribute("type", "button");
@@ -40,15 +38,11 @@ function btnAdded(Name) {
   document.getElementsByClassName("ButtonsAdded")[0].appendChild(button);
 }
 
-//Button clicked
 function btnClicked(Name) {
   //Find Id:
-  var partsId = Name.split(".");
-  var extractedId = partsId[1].split(":")[1];
-
+  var extractedId = Name.split(".")[1].split(":")[1];
   //Find Row:
-  var partsRow = Name.split(".");
-  var extractedRow = partsRow[2].split(":")[1];
+  var extractedRow = Name.split(".")[2].split(":")[1];
 
   if (extractedId == 1) {
     DeleteButtonClicked(extractedRow);
@@ -57,33 +51,38 @@ function btnClicked(Name) {
   }
 }
 
-function AddedButtonClicked(ButtonCounter) {
-  DocumentButton = document.getElementById("btn" + ButtonCounter.toString());
-  TextBoxElement.value = DocumentButton.value;
-}
-
 function DeleteButtonClicked(row) {
-  var DocumentButton = document.querySelectorAll(`[id*='Row:${row}.']`);
+  TextBoxElement.style.display = "none";
+  TextBoxElement.value = "";
+  TextBoxElement.disabled = true;
+
+  var DocumentButton = document.querySelectorAll(
+    `[id*='Name:Js'][id*='Row:${row}.']`
+  );
   DocumentButton.forEach((element) => {
     element.remove();
   });
 }
 
 function EditButtonClicked(row) {
-  var getButton = `Name:Button. Id:0. Row:${row}.`;
+  TextBoxElement.style.display = "block";
+  var getButton = `Name:Js - Button. Id:0. Row:${row}.`;
   DocumentButton = document.getElementById(getButton);
+  console.log(TextBoxElement);
   TextBoxElement.value = DocumentButton.value;
   TextBoxElement.disabled = false;
+  TextBoxElement.focus();
 }
 
 function TextboxValueChanged() {
   DocumentButton.value = TextBoxElement.value;
   TextBoxElement.disabled = true;
   TextBoxElement.value = "";
+  TextBoxElement.style.display = "none";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  var TextBoxElement = document.getElementById("txtButtonContext"); // Replace with the actual ID of your text box element
+  var TextBoxElement = document.getElementById("txtButtonContextJs");
   TextBoxElement.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
       TextboxValueChanged();

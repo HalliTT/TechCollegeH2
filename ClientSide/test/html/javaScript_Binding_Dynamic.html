@@ -11,7 +11,8 @@
 
 <body>
     <div class="Margin">
-        <input id="txtButtonContext" disabled type="text" value="test" onblur="TextboxValueChanged()" />
+        <input id="txtButtonContextJs" disabled onfocus="this.value = this.value;" type="text" hidden value="test" onblur="TextboxValueChanged()" />
+        <input id="txtButtonContextJq" disabled type="text" hidden value="test" />
         <br />
         <br />
         <input id="btnAddNewButtonJs" type="button" value="Tilføj JS knap" onclick="AddNewButtonJs()" />

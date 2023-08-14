@@ -1,92 +1,92 @@
-var ButtonCounter = 0;
-var TextBoxElement;
-var DocumentButton;
-
 $(document).ready(function () {
+  var buttonCounter = 0;
+  var textBoxElement;
+  var documentButton;
+
   SetupDOMElements();
 
-  $("#btnAddNewButtonJq").click(function () {
-    AddNewButtonJq();
-  });
+  function SetupDOMElements() {
+    textBoxElement = $("#txtButtonContextJq");
 
-  // Add buttons to array
+    $("#btnAddNewButtonJq").click(function () {
+      AddNewButtonJq();
+    });
+
+    textBoxElement.on("keyup", function (event) {
+      if (event.key === "Enter") {
+        TextboxValueChanged();
+      }
+    });
+
+    $("#txtButtonContextJq").on("blur", function () {
+      TextboxValueChanged();
+    });
+  }
+
   function AddNewButtonJq() {
     var pre = $("<pre>");
     $(".ButtonsAdded").append(pre);
 
     var name = ["Button", "Delete", "Edit"];
     for (var i = 0; i < name.length; i++) {
-      btnAdded(`Name:${name[i]}. Id:${i}. Row:${ButtonCounter}.`);
+      btnAdded(`Name:Jq - ${name[i]}. Id:${i}. Row:${buttonCounter}.`);
     }
-    ButtonCounter++;
+    buttonCounter++;
   }
 
-  // Create button
-  function btnAdded(Name) {
-    var partsName = Name.split(".");
-    var extractedName = partsName[0].split(":")[1];
+  function btnAdded(name) {
+    var extractedName = name.split(".")[0].split(":")[1];
 
-    var button = $("<input>");
-    button.attr("type", "button");
-    button.attr("ID", Name);
-    button.attr("value", extractedName);
-
-    button.css({
-      backgroundColor: "Blue",
-      color: "White",
-      height: "40px",
+    var button = $("<input>", {
+      type: "button",
+      id: name,
+      value: extractedName,
+      css: {
+        backgroundColor: "Blue",
+        color: "White",
+        height: "40px",
+      },
     });
 
     button.click(function () {
-      btnClicked(Name);
+      btnClicked(name);
     });
 
     $(".ButtonsAdded").append(button);
   }
 
-  // Button clicked
-  function btnClicked(Name) {
-    var partsId = Name.split(".");
-    var extractedId = partsId[1].split(":")[1];
-
-    var partsRow = Name.split(".");
-    var extractedRow = partsRow[2].split(":")[1];
+  function btnClicked(name) {
+    var extractedId = name.split(".")[1].split(":")[1];
+    var extractedRow = name.split(".")[2].split(":")[1];
 
     if (extractedId == 1) {
-      DeleteButtonClicked(extractedRow);
+      deleteButtonClicked(extractedRow);
     } else if (extractedId == 2) {
-      EditButtonClicked(extractedRow);
+      editButtonClicked(extractedRow);
     }
   }
 
-  function AddedButtonClicked(ButtonCounter) {
-    DocumentButton = $("#btn" + ButtonCounter.toString());
-    TextBoxElement.val(DocumentButton.val());
-  }
+  function deleteButtonClicked(row) {
+    textBoxElement.prop("disabled", true).val("").hide();
 
-  function DeleteButtonClicked(row) {
-    var DocumentButton = $('[id*="Row:' + row + '."]');
-    DocumentButton.each(function () {
+    $('[id*="Name:Jq"][id*="Row:' + row + '."]').each(function () {
       $(this).remove();
     });
   }
 
-  function EditButtonClicked(row) {
-    var getButton = `Name:Button. Id:0. Row:${row}.`;
-    DocumentButton = $("#" + getButton);
-    TextBoxElement.val(DocumentButton.val());
-    TextBoxElement.prop("disabled", false);
+  function editButtonClicked(row) {
+    var getButton = `Name:Jq - Button. Id:0. Row:${row}.`;
+    var escapedId = getButton.replace(/(:|\.|\s)/g, "\\$1");
+    documentButton = $(`#${escapedId}`);
+    textBoxElement
+      .prop("disabled", false)
+      .val(documentButton.val())
+      .show()
+      .focus();
   }
 
   function TextboxValueChanged() {
-    DocumentButton.val(TextBoxElement.val());
-    TextBoxElement.prop("disabled", true);
+    documentButton.val(textBoxElement.val());
+    textBoxElement.prop("disabled", true).val("").hide();
   }
-
-  var TextBoxElement = $("#txtButtonContext");
-  TextBoxElement.on("keyup", function (event) {
-    if (event.key === "Enter") {
-      TextboxValueChanged();
-    }
-  });
 });
