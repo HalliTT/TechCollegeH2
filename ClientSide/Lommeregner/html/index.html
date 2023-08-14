@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Lommeregner</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <button id="show-history-button" class="show-btn">Vis historie</button>
+            <div class="cal-container">
+                <div class="output">
+                    <div data-previous-operand class="previous-operand"></div>
+                    <div data-current-operand class="current-operand"></div>
+                </div>
+                <button data-all-clear>CLEAR</button>
+                <button data-delete>DELET</button>
+                <div></div>
+                <button data-operation>+</button>
+                <button data-number>7</button>
+                <button data-number>8</button>
+                <button data-number>9</button>
+                <button data-operation>÷</button>
+                <button data-number>4</button>
+                <button data-number>5</button>
+                <button data-number>6</button>
+                <button data-operation>*</button>
+                <button data-number>1</button>
+                <button data-number>2</button>
+                <button data-number>3</button>
+                <button data-operation>-</button>
+                <button data-number>0</button>
+                <button data-number>.</button>
+                <button data-equals class="span-two">=</button>
+            </div>
+        </div>
+        <div class="column">
+            <div class="cal-history" style="display: none;">
+                <div class="output-history">
+                    Historie
+                    <div id="history-list"></div>
+                </div>
+            </div>
+        </div>
+        
+       
+    </div>
+
+    <script src="../js/script.js">
+    </script>
+</body>
+</html>
+
+
