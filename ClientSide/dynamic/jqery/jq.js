@@ -27,10 +27,15 @@ $(document).ready(function () {
     var pre = $("<pre>");
     $(".ButtonsAdded").append(pre);
 
+    var label = $("<label>");
+    $(".ButtonsAdded").append(label);
+
     var name = ["Button", "Delete", "Edit"];
     for (var i = 0; i < name.length; i++) {
       btnAdded(`Name:Jq - ${name[i]}. Id:${i}. Row:${buttonCounter}.`);
     }
+
+    label.html("Row: " + [buttonCounter]);
     buttonCounter++;
   }
 
