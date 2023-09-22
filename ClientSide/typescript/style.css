@@ -71,26 +71,3 @@ body {
 .cal-container>button:hover {
     background-color: #1FC5A8;
 }
-
-/* story */
-.cal-history {
-    display: none;
-    padding-top: 15px;
-}
-
-.output-history {
-    background-color: #fff;
-    word-wrap: break-word;
-    word-break: break-all;
-    min-height: 80px;
-    min-width: 500px;
-    max-width: 500px;
-    padding-bottom: 10px;
-}
-
-.output-history>div>p {
-    cursor: pointer;
-}
-.output-history>div>p:hover {
-    background-color: #1FC5A8;
-}

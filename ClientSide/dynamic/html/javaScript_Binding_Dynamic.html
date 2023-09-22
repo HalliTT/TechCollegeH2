@@ -11,12 +11,12 @@
 
 <body>
     <div class="Margin">
+        <H1>JS Liste</H1>
+
         <input id="txtButtonContextJs" disabled onfocus="this.value = this.value;" type="text" hidden value="test" onblur="TextboxValueChanged()" />
-        <input id="txtButtonContextJq" disabled type="text" hidden value="test" />
         <br />
         <br />
         <input id="btnAddNewButtonJs" type="button" value="Tilføj JS knap" onclick="AddNewButtonJs()" />
-        <input id="btnAddNewButtonJq" type="button" value="Tilføj JQ knap" />
         <br />
         <br />
         
@@ -29,6 +29,16 @@
         <br />
         <div id="paginationContainer"></div>
         <div class="pagination"></div>
+        
+        <br />
+        <hr />
+        <br />
+        <H1>JQ Liste</H1>
+        <input id="txtButtonContextJq" disabled type="text" hidden value="test" />
+        <input id="btnAddNewButtonJq" type="button" value="Tilføj JQ knap" />
+        <div class="JqButtonsAdded">
+        </div>
+
     </div>
 </body>
 

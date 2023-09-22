@@ -25,10 +25,10 @@ $(document).ready(function () {
 
   function AddNewButtonJq() {
     var pre = $("<pre>");
-    $(".ButtonsAdded").append(pre);
+    $(".JqButtonsAdded").append(pre);
 
     var label = $("<label>");
-    $(".ButtonsAdded").append(label);
+    $(".JqButtonsAdded").append(label);
 
     var name = ["Button", "Delete", "Edit"];
     for (var i = 0; i < name.length; i++) {
@@ -57,7 +57,7 @@ $(document).ready(function () {
       btnClicked(name);
     });
 
-    $(".ButtonsAdded").append(button);
+    $(".JqButtonsAdded").append(button);
   }
 
   function btnClicked(name) {
