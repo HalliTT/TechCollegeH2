@@ -1,0 +1,96 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #5761B2, #1FC5A8);
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cal-container {
+    padding-top: 10px;
+    display: grid;
+    justify-content: center;
+    min-height: 200px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.span-two {
+    grid-column: span 2 / auto;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px;
+}
+
+.output .previous-operand {
+    color: rgba(197, 121, 121, 0.875);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: rgba(185, 58, 58, 0.875);
+    font-size: 2.5rem;
+}
+
+.cal-container>button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid #fff;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+.cal-container>button:hover {
+    background-color: #1FC5A8;
+}
+
+/* story */
+.cal-history {
+    display: none;
+    padding-top: 15px;
+}
+
+.output-history {
+    background-color: #fff;
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 80px;
+    min-width: 500px;
+    max-width: 500px;
+    padding-bottom: 10px;
+}
+
+.output-history>div>p {
+    cursor: pointer;
+}
+.output-history>div>p:hover {
+    background-color: #1FC5A8;
+}

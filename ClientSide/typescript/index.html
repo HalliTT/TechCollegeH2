@@ -3,34 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>TypeScript Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- in cmd type: tsc --watch -->
 </head>
 <body>
-        <div class="Margin">
-            <h1>Student List</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Student Id</th>
-                        <th>Name</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody id="studentTableBody">
-                </tbody>
-            </table>
-
-            <input id="btnTs" type="button" value="Tilføj Ts knap" />
-            <input id="inputTs" type="input" />
-
-
-            <div id="paginationContainer"></div>
-            <div class="pagination"></div>
+    <div class="Margin" id="main">
+        <h1>TypeScript Calculator</h1>
+        <div class="row">
+            <div class="column">
+                <div class="cal-container">
+                    <div class="output">
+                        <div data-previous-operand id="previous-operand" class="previous-operand"></div>
+                        <div data-current-operand id="current-operand" class="current-operand"></div>
+                    </div>
+                    <button data-all-clear id="clear">CLEAR</button>
+                    <button data-delete id="delete">DELET</button>
+                    <div></div>
+                    <button data-operation="+" class="operation-button">+</button>
+                    <button data-number="7" class="number-button">7</button>
+                    <button data-number="8" class="number-button">8</button>
+                    <button data-number="9" class="number-button">9</button>
+                    <button data-operation="÷" class="operation-button">÷</button>
+                    <button data-number="4" class="number-button">4</button>
+                    <button data-number="5" class="number-button">5</button>
+                    <button data-number="6" class="number-button">6</button>
+                    <button data-operation="*" class="operation-button">*</button>
+                    <button data-number="1" class="number-button">1</button>
+                    <button data-number="2" class="number-button">2</button>
+                    <button data-number="3" class="number-button">3</button>
+                    <button data-operation="-" class="operation-button">-</button>
+                    <button data-number="0" class="number-button">0</button>
+                    <button data-number="." class="number-button">.</button>
+                    <button id="calculate" class="span-two">=</button>
+                </div>
+            </div>
         </div>
-
+    </div>
     <script src="./out/main.js"></script>
-
 </body>
 </html>
