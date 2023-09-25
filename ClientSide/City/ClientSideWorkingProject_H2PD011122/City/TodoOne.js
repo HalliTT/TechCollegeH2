@@ -1,9 +1,6 @@
 ﻿const uri = "https://cityinfo.buchwaldshave34.dk/api/City";
 const Languri = "https://cityinfo.buchwaldshave34.dk/api/CityLanguage";
 const pointUri = "https://cityinfo.buchwaldshave34.dk​/api/PointOfInterest";
-
-//Include realtion true på city
-
 let todos = [];
 let ThisUserName = "UserHaraldur";
 
@@ -34,7 +31,7 @@ function populateSelects() {
     option.text = country.countryName;
     option.value = country.countryID;
     addCountryTextbox.add(option);
-    editCountryTextbox.add(option.cloneNode(true)); // Clone the option for editing
+    editCountryTextbox.add(option.cloneNode(true));
   });
 
   //Clear Lang
@@ -46,7 +43,7 @@ function populateSelects() {
     option.text = lang.languageName;
     option.value = lang.languageId;
     addLangTextbox.add(option);
-    editLangTextbox.add(option.cloneNode(true)); // Clone the option for editing
+    editLangTextbox.add(option.cloneNode(true));
   });
 }
 
